@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/imgs/web_logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/queries.css">
+    <link rel="stylesheet" href="/css/events.css">
+    <link rel="stylesheet" href="/output.css"> -->
+    <title>The Late Night Stumblers || Welcome</title>
+
+
+        <style>
+            /*
+--- 01 TYPOGRAPHY SYSTEM
+
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+
+
+- Letter spacing
+-0.5px
+0.75px
+
+
+--- 02 COLORS
+
+
+- Primary: #2b8a3e
+          #1098ad
+- Tints:
+#ebfbee,#e3fafc
+#b2f2bb,#99e9f2
+#51cf66,#3bc9db
+
+
+- Shades:
+#37b24d,#0c8599
+#2f9e44,#0b7285
+
+
+- Accents:
+#ffc078,#ffa94d,#e8590c,#d9480f
+- Greys
+
+
+#888
+#767676 (lightest grey allowed on #fff)
+#444444 (lightest grey allowed on ##ebfbee,#e3fafc)
+#555
+#333
+
+
+--- 05 SHADOWS
+
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+
+--- 06 BORDER-RADIUS
+
+
+Default: 9px
+Medium: 11px
+
+
+--- 07 WHITESPACE
+
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  html {
+    font-size: 69%;
+  }
+  
+  
+  body {
+    font-family: 'Rubik', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+    /* background-color: #000; */
+  }
+  
+  
+  section {
+    max-width: 5000px;
+  }
+
+  /* ?GENERAL REUSABLE COMPONENTS */
+  
+  
+  .container {
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+  }
+  
+  
+  .grid {
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+  }
+  
+  
+  /* .grid:last-child{
+    margin-bottom: 0;
+  } */
+  
+  
+  .grid:not(:last-child) {
+    margin-bottom: 9.6rem;
+  }
+  
+  
+  .grid--2--cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  
+  .grid--3--cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  
+  .grid--4--cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  
+  .grid--5--cols {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  
+  .grid--center--v {
+    align-items: center;
+  }
+  
+  
+  .heading-primary,
+  .heading-secondary,
+  .heading-tertiary {
+    font-weight: 700;
+    color: #333;
+    letter-spacing: -0.5px;
+  }
+  
+  
+  .heading-primary {
+    font-size: 5.2rem;
+    line-height: 1.05;
+    margin-bottom: 3.2rem;
+  }
+  
+  
+  .heading-secondary {
+    font-size: 4.4rem;
+    line-height: 1.2;
+    margin-bottom: 9.6rem;
+  }
+  
+  
+  .heading-tertiary {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+  }
+  
+  
+  .subheading {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #0c8599;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+  }
+  
+  
+  .btn,
+  .btn:link,
+  .btn:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.6rem 3.2rem;
+    border-radius: 9px;
+    /* ^only necessary for .btn */
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s;
+  }
+  
+  
+  .btn-full:hover,
+  .btn-full:visited {
+    background-color: #2f9e44;
+    color: #fff;
+  }
+  
+  
+  .btn--full:hover,
+  .btn--full:active {
+    background-color: #1ecb3d;
+  }
+  
+  
+  .btn--outline:link,
+  .btn--outline:visited {
+    background-color: #fff;
+    color: #555;
+  }
+  
+  
+  .btn--outline:hover,
+  .btn--outline:active {
+    background-color: #fdf2e9;
+    /* ^Tirck to add border inside */
+    box-shadow: inset 0 0 0 3px #fff;
+  }
+  
+  
+  .btn--form {
+    background-color: #2f9e44;
+    color: #fdf2e9;
+    align-self: end;
+    padding: 1.2rem;
+  }
+  
+  
+  .btn--form:hover {
+    background-color: #fff;
+    color: #555;
+  }
+  
+  
+  .link:link,
+  .link:visited {
+    display: inline-block;
+    color: #2b8a3e;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: all 0.3s;
+  }
+  
+  
+  .link:hover,
+  .link:active {
+    color: #064112;
+    border-bottom: 1px solid transparent;
+  }
+  
+  
+  .list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  
+  
+  .list-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+  }
+  
+  
+  .list-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #2b8a3e;
+  }
+  
+  
+  *:focus {
+    outline: none;
+    /* ^the line beneath casts a box shadow over focused items */
+    /* box-shadow: 0 0 0 0.8rem rgba(0, 0, 0, 0.5); */
+  }
+  
+  
+  /* ~HELPER/SETTINGS CLASSES */
+  .margin-right-sm {
+    margin-right: 1.6rem !important;
+  }
+  
+  
+  .margin-right-md {
+    margin-right: 4.8rem !important;
+  }
+  
+  
+  .center-text {
+    text-align: center;
+  }
+  
+  
+  strong {
+    font-weight: 500;
+  }
+  
+  
+  
+  /* 
+--- 02 COLORS
+
+
+- Primary: #2b8a3e
+          #1098ad
+- Tints:
+#ebfbee,#e3fafc
+#b2f2bb,#99e9f2
+#51cf66,#3bc9db
+
+
+- Shades:
+#37b24d,#0c8599
+#2f9e44,#0b7285
+
+
+- Accents:
+#ffc078,#ffa94d,#e8590c,#d9480f
+- Greys
+
+
+#888
+#767676 (lightest grey allowed on #fff)
+#444444 (lightest grey allowed on ##ebfbee,#e3fafc)
+#555
+#333
+*/
+
+:root {
+    --background-green: #2b8a3e;
+    --background-blue: #1098ad;
+    --black: #000;
+    --white: #fff;
+    --event__font-size-big: 3rem;
+    --event__font-size-medium: 2rem;
+    --event__font-size-small: 1.7rem;
+    --headline-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+    --headline__margin-right-fix: 0 0 2rem 101.2rem;
+    --merch__card-border: 5px solid #fff;
+
+    --level-one: translateZ(3rem);
+    --level-two: translateZ(6rem);
+    --level-three: translateZ(9rem);
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    --clr: #b7c9e5
+}
+
+
+/* !HEADER START */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+}
+
+.logo {
+    height: 5rem;
+}
+
+/* !HEADER END */
+
+
+/* ~NAVIGATION START */
+
+.main-nav__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+    letter-spacing: 2px;
+    order: 4;
+}
+
+.main-nav__link:link,
+.main-nav__link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.8rem;
+    transition: all .3s;
+}
+
+.main-nav__link:hover,
+.main-nav__link:active {
+    color: #1098ad;
+}
+
+.main-nav__link.nav-cta:link,
+.main-nav__link.nav-cta:visited {
+    padding: 1.2rem 2.4rem;
+    border-radius: 7px;
+    color: #fff;
+    background-color: var(--background-blue);
+}
+
+.main-nav__link.nav-cta:hover,
+.main-nav__link.nav-cta:active {
+  background-color: #000000;
+  color: var(--background-blue);
+}
+
+
+/* ~NAVIGATION END */
+
+/* ~MOBILE NAVAGATION START */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* ~MOBILE NAVAGATION END */
+
+/* !STICKY NAVIGATION START */
+
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+/* !STICKY NAVIGATION END */
+
+/* ?MUSIC SIDEBAR */
+  
+  
+.music-sidebar {
+    /* TODO try to build a sidebar to hold embebed spotify songs */
+    padding: 0;
+    background-color: #000;
+  }
+  
+  
+  .music-icon-sdbar {
+    height: 5rem;
+  }
+
+  .music-icons {
+    padding: 4rem 0 0 0;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    cursor: pointer;
+  }
+
+  .music__social-icons {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .tidal {
+    width: 7rem;
+  }
+
+  .apple {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .music__social-icons:hover {
+    transform: scale(1.6);
+  }
+  
+  
+  /* ?MUSIC SIDEBAR END */
+  
+
+  /* *HERO START */
+
+  .hero-section {
+    background-color: #000;
+    padding: 4.8rem 0 9.6rem 0;
+    border-radius: 0 0 9px 9px;
+  }
+
+  .hero {
+    background-image: url(/imgs/tall_tales.jpg);
+    border-radius: 9px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100rem;
+    width: 100rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9.6rem;
+    align-items: center;
+  }
+
+  /* *HERO END */
+
+
+/* &BIO AND CAROUSEL START */
+
+.carousel {
+  position: relative;
+  height: 600px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.carousel__imgs {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+
+.carousel__track-container {
+  padding: 10px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel__track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 150ms ease-in;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.carousel__button--right {
+  right: -40px;
+  /* top: 315px; */
+}
+
+.carousel__button--left {
+  left: -40px;
+}
+
+.carousel__button img {
+  width: 40px;
+}
+
+.carousel__nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  
+}
+
+.carousel__indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.267);
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+.current-slide {
+  background: rgba(16, 152, 173, 0.914);
+}
+
+.is-hidden {
+  display: none;
+}
+
+
+.bio-section {
+    margin: 10em 0 0 0;
+    display: grid;
+    padding: 0;
+    background-color: #2b8a3e;
+    border-radius: 9px;
+}
+
+.carousel_bio {
+    padding: 10rem 0 0 0;
+    margin: 0;
+    background-color: #e9f6f6c5;
+    border-radius: 9px;
+}
+
+.bio__headline {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    justify-content: center;
+    /* margin-left: 295px; */
+    padding: 8rem 0 0 0;
+    /* margin: 0 0 45px 65rem; */
+    align-self: center;
+    align-items: center;
+    color: #fff;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1) ;
+
+}
+
+.bio__description {
+    color: #fff;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    font-size: 22px;
+    font-weight: 500;
+    /* margin-right: 200px; */
+    align-self: center;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+    line-height: 6rem;
+    padding: 0 0 20rem 0;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1) ;
+}
+/* &BIO AND CAROUSEL END */
+
+/* ?EVENTS SECTION START */
+
+.events-section {
+    margin: 10em 0 0 0;
+    display: grid;
+    padding: 0 0 20rem 0;
+    background-color: #1098ad;
+    border-radius: 9px;
+}
+
+.events__headline{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 50px;
+    margin-left: 1150px;
+    letter-spacing: 4px;
+    padding: 8rem 0 0 0;
+    margin: 0 0 45px ;
+    color: #fff;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1) ;
+  }
+
+.event__container {
+  padding-top: 2rem;
+  /* background-color: #fff; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 2rem 0;
+}
+
+.event__img {
+  height: 30rem;
+  width: 30rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+  
+.event__title {
+  color: #fff;
+  text-shadow: 1px 3px 5px #000;
+  font-size: 5rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.2rem;
+}
+
+.event__description {
+  color: #fff;
+  text-shadow: 1px 3px 5px #000;
+  font-size: 2.3rem;
+  margin-bottom: 1.4rem;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.time-n-date {
+  color: #fff;
+  text-shadow: 1px 3px 5px #000;
+  font-size: 1.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  line-height: 2.5rem;
+}
+
+.event__date {
+  margin-top: 2rem;
+}
+
+.event__time {
+  margin-top: 1rem;
+}
+
+.tags-container {
+  display: flex;
+  gap: 15px;
+}
+
+.event__tag {
+  font-size: 1.2rem;
+  padding: 2rem;
+  background-color: lightgray;
+  color: #000;
+  border-radius: 12px;
+  transition: background-color 500ms ease;
+}
+
+.event__tag:hover,.event__tag:focus{
+  background-color: #000;
+  color: #fff;
+  
+}
+
+.venue a:link{
+  color: #000;
+}
+.venue a:visited {
+  color: orange;
+}
+
+.venue:hover,.venue:focus{
+  background-color: #3cbe56;
+  color: #000;
+}
+
+
+
+  
+
+/* ?EVENTS SECTION END */
+
+/* *MERCH START */
+.merch__headline {
+  margin: var(--headline__margin-right-fix);
+  /* padding-top: 8rem; */
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: var(--headline-shadow);
+}
+
+
+.merch__section {
+  margin: 10em 0 0 0;
+  display: grid;
+  padding: 8rem 0 30rem 0;
+  background-color: #2b8a3e;
+  border-radius: 9px;
+}
+
+.card {
+  width: 30rem;
+  height: 30rem;
+
+}
+
+.card:hover .card__content {
+  transform: rotateY(.5turn);
+}
+
+.card__content {
+  text-align: center;
+  position: relative;
+  padding: 15em;
+  transition: transform 3s;
+  background: #000;
+  border-radius: 9px;
+  transform-style: preserve-3d;
+}
+
+.card__front,.card__back {
+  position: absolute;
+  inset: 0;
+  padding: 2em;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.card__title {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  transform: translateZ(6rem);
+  margin-bottom: 1.1rem;
+  color: var(--white);
+}
+
+.card__price {
+  transform: translateZ(2rem);
+  font-size: 2.1rem;
+  color: var(--white);
+}
+
+.card__body {
+  transform:rotateZ(2rem)
+}
+
+.card__front {
+  /* background: lightgreen; */
+  border: var(--merch__card-border);
+  border-radius: 9px;
+}
+
+.card__back {
+  transform: rotateY(.5turn);
+  border: var(--merch__card-border);
+  border-radius: 9px;
+  /* background: lightblue; */
+}
+
+.card__merch {
+  transform: var(--level-one);
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.merch__photo {
+  width: 15rem;
+  height: 15rem;
+  margin-bottom: 2rem;
+  object-fit: cover;
+  transform: var(--level-two);
+}
+
+
+/* *MERCH END */
+
+/* &FOOTER */
+
+/* 
+@media screen and (max-width: 320px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .socials_nav{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+   */
+.footer {
+    padding: 12.8rem 0;
+    border-top: 1px solid #eee;
+    background-color: #000;
+    margin-top: 250px;
+  }
+  
+  
+  .grid--footer {
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    row-gap: 100px;
+    /* column-gap: 200px; */
+  }
+  
+  
+  .logo-col {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .footer-logo {
+    display: block;
+    margin-bottom: 3.2rem;
+  }
+
+  .footer-logo:hover, .footer-logo:active{
+    transform: scale(1.3);
+  }
+  
+  
+  .social-links {
+    list-style: none;
+    display: flex;
+    gap: 2.4rem;
+  }
+  
+  
+  .social-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+  
+  
+  .copyright {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #fff;
+    margin-top: auto;
+  }
+
+ 
+  
+  
+  .footer-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+    color: #fff;
+  }
+  
+  
+  .contacts {
+    font-style: normal;
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+  
+  
+  .address {
+    margin-bottom: 2.4rem;
+  }
+  
+  
+  .footer-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  
+  
+  .footer-link:link,
+  .footer-link:visited {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #fff;
+    transition: all 0.3s;
+  }
+  
+  
+  .footer-link:hover,
+  .footer-link:active {
+    
+  color: #2b8a3e;
+  }
+  
+  .footer__soical-icons {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .footer__soical-icons:hover {
+    transform: scale(2);
+  }
+
+ 
+
+  .footer-nav-socials {
+    display: flex;
+    list-style-type: none;
+    gap: 25px;
+  }
+  
+  /* &FOOTER END */
+
+/* *FRIENDS START */
+
+.friends__container{
+  display: flex;
+  padding: 0 20rem 40rem 20rem;
+  background-color: #1098ad;
+  text-decoration: none;
+}
+
+.friends__headline {
+  align-items: flex-start;
+  /* margin-right: -500px; */
+  color: #fff;
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.friends__list {
+  list-style-type: none;
+  display: grid;
+  padding-top: 10rem;
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5,1fr);
+}
+
+.friends__item {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* *FRIENDS END */
+        </style>
+
+</head>
+<body>
+
+
+    
+
+
+
+    <header class="header">
+      <a href="/index.html">
+        <img class="logo" alt="Late Night Stumblers logo" src="/imgs/logo2.jpg" />
+      </a>
+      
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li><a class="main-nav__link nav-cta" href="#">Booking</a></li>
+            <li><a class="main-nav__link" href="#">Events</a></li>
+            <!--^ <li><a class="main-nav__link" href="#">Socials</a></li> -->
+            <!--^ <li><a class="main-nav__link" href="#">Blog</a></li> -->
+            <li><a class="main-nav__link" href="#">Merch</a></li>
+            <li><a class="main-nav__link" href="/friends.html">Friends</a></li> 
+          </ul>
+        </nav>
+        
+
+        <!-- <button class="btn-mobile-nav">
+          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+          <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+        </button> -->
+
+        
+    </header>
+
+    <main>
+      
+        <div class="music-icons">
+          <a href="https://open.spotify.com/artist/3IXDQS686KzmKQj3yNOlMI"> 
+            <img class="music__social-icons" src="/social icons/1298766_spotify_music_sound_icon.png" alt="spotify icon">
+          </a>
+          <a href="https://music.apple.com/us/artist/the-late-night-stumblers/1661252816">
+            <img class="music__social-icons apple" src="/social icons/white_apple_icon.png" alt="apple music icon">
+          </a>
+          <a href="https://listen.tidal.com/artist/36334997">
+            <img class="music__social-icons tidal" src="/social icons/tidal_logo.png" alt="tidal icon">
+          </a>
+          <a href="https://www.amazon.com/dp/B0BQX86ZNM/ref=sr_1_1?crid=1RZETD2L5DHO3&keywords=late+night+stumblers&qid=1678576583&sprefix=late+night+stumblers%2Caps%2C68&sr=8-1">
+            <img class="music__social-icons" src="/social icons/amazon_color.png" alt="amazon icon">
+          </a>
+          <a href="https://www.pandora.com/artist/the-late-night-stumblers/AR25XzdZldmjxx9">
+            <img class="music__social-icons" src="/imgs/pandora_color.png" alt="pandora icon">
+          </a>
+          <!-- <a href="#">
+            <img class="music__social-icons" src="/social icons/1298765_soundcloud_icon.png" alt="soundcloud icon">
+          </a> -->
+        </div>
+
+        <section class="hero-section">
+          <div class="hero">
+
+          </div>
+        </section>
+
+       <section class="carousel_bio">
+        
+      <div class="carousel">
+        <button class="carousel__button carousel__button--left is-hidden">
+              <img src="/imgs/left-arrow-btn.png" alt="left arrow for gallery">
+        </button>
+        
+        <div class="carousel__track-container">
+            <ul class="carousel__track">
+                <li class="carousel__slide current-slide">
+                    <img class="carousel__imgs" src="/imgs/alley.jpg" alt="#">
+                </li>
+                <li class="carousel__slide">
+                    <img class="carousel__imgs" src="/imgs/prince.jpg" alt="#">
+                </li>
+                <li class="carousel__slide">
+                    <img class="carousel__imgs" src="/imgs/yawn_dog.jpg" alt="#">
+                </li>
+                <li class="carousel__slide">
+                  <img class="carousel__imgs" src="/imgs/yawn_dog.jpg" alt="#">
+              </li>
+              <li class="carousel__slide">
+                  <img class="carousel__imgs" src="/imgs/yawn_dog.jpg" alt="#">
+              </li>
+              <li class="carousel__slide">
+                <img class="carousel__imgs" src="/imgs/prince.jpg" alt="#">
+            </li>
+            </ul>
+        </div>
+        <button class="carousel__button carousel__button--right">
+            <img src="/imgs/right-arrow-btn.png" alt="right arrow for gallery">
+        </button>
+
+        
+        <div class="carousel__nav">
+            <button class="carousel__indicator current-slide"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+        </div>
+
+    </div>  
+
+
+      <div class="bio-section">
+        <h2 class="bio__headline">
+          Bio
+        </h2>
+
+        <p class="bio__description">
+              Hailing from the hills of Rockbridge County Virginia, The Late Night Stumblers play an
+              eclectic mix of country, Americana, and Rock and Roll. Influenced by a variety of artists and
+              bands from Hank Williams to Drive by Truckers, The Stumblers perform cover songs as well as a
+              healthy dose of original material with an emphasis on story telling. The current line up consists
+              of Callum Baxter on drums, Taylor Mason on bass guitar, Travis Odell on lead guitar, banjo and
+              mandolin, and Bryce Teague on rhythm guitar and vocals. The Late Night Stumblers have
+              provided quality live entertainment for public and private events since August of 2019. With the
+              flexibility to play intimate acoustic shows as well as full bore electric performances, The Late
+              Night Stumblers offer up something for everyone.
+        </p>
+      </div>
+       </section>
+
+       
+        <!-- <a href="/calendar.html"><li>Calendar</li></a> -->
+        
+       <section class="sectoin-events">
+
+        <div class="events-section">
+
+          <h2 class="events__headline">Events</h2>
+          <div class="event__container">
+            <a href="#">
+              <img src="/imgs/brt.jpeg" alt="" class="event__img">
+            </a>
+            <h3 class="event__title">
+              Event Title
+            </h3>
+            <p class="event__description">
+              Lorem ipsum, dolor sit amet 
+              consectetur adipisicing elit. 
+              Excepturi ducimus explicabo t
+              empora, doloribus laudantium accusantium facere!
+            </p>
+            <div class="time-n-date">
+              <p class="event__date">
+                4.12.23
+              </p>
+              <p class="event__time">
+                7-10
+              </p>
+            </div>
+            <div class="tags-container">
+              <span class="event__tag">
+                3 Hours
+              </span>
+              <span class="event__tag">
+                Indoors
+              </span>
+              <span class="event__tag venue">
+                <a href="https://www.brewridgetaps.com/">Venue</a>
+              </span>
+            </div>
+
+            <div class="event__container">
+              <a href="#">
+                <img src="/imgs/full band laughing with MJ2 .jpg" alt="" class="event__img">
+              </a>
+              <h3 class="event__title">
+                Event Title
+              </h3>
+              <p class="event__description">
+                Lorem ipsum, dolor sit amet 
+                consectetur adipisicing elit. 
+                Excepturi ducimus explicabo t
+                empora, doloribus laudantium accusantium facere!
+              </p>
+              <div class="time-n-date">
+                <p class="event__date">
+                  4.12.23
+                </p>
+                <p class="event__time">
+                  7-10
+                </p>
+              </div>
+              <div class="tags-container">
+                <span class="event__tag">
+                  3 Hours
+                </span>
+                <span class="event__tag">
+                  Outdoors
+                </span>
+                <span class="event__tag venue">
+                  Venue
+                </span>
+              </div> 
+
+              <div class="event__container">
+                <a href="#">
+                  <img src="/imgs/apple butter fest 2022 (1).jpg" alt="" class="event__img">
+                </a>
+                <h3 class="event__title">
+                  Event Title
+                </h3>
+                <p class="event__description">
+                  Lorem ipsum, dolor sit amet 
+                  consectetur adipisicing elit. 
+                  Excepturi ducimus explicabo t
+                  empora, doloribus laudantium accusantium facere!
+                </p>
+                <div class="time-n-date">
+                  <p class="event__date">
+                    4.12.23
+                  </p>
+                  <p class="event__time">
+                    7-10
+                  </p>
+                </div>
+                <div class="tags-container">
+                  <span class="event__tag">
+                    3 Hours
+                  </span>
+                  <span class="event__tag">
+                    Outdoors
+                  </span>
+                  <span class="event__tag venue">
+                    Venue
+                  </span>
+                </div>
+
+          </div>
+        
+        </div>
+
+       </section>
+
+       <section class="section-merch">
+        <div class="merch__section">
+
+          <div class="merch__headline">
+            Merch
+          </div>
+
+
+          <div class="card">
+       
+            <div class="card__content">
+                
+                <div class="card__front">
+                    <img src="/imgs/front_shirt.png" alt="front of t shirt" class="merch__photo">
+                    <h3 class="card__title">LNS T-Shirts</h3>
+                    <p class="card__price">$30</p>  
+                </div>
+    
+                <div class="card__back">
+                    <img src="/imgs/back_of_shirt.jpeg" alt="back of t shirt" class="merch__photo">
+                    <p class="card__merch">Get a Stumblers shirt today!</p>
+                </div>
+    
+            </div>
+    
+        </div>
+
+        </div>
+       </section>
+
+    </main>
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img class="logo" alt="Omnifood logo" src="/imgs/logo2.jpg" />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; 2023 by The Late Night Stumblers and Dylan Sherman. All rights reserved.
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <!--^ <p class="address">
+              623 Harrison St., 2nd Floor, San Francisco, CA 94107
+            </p> -->
+            <p>
+              <!--^ <a class="footer-link" href="tel:415-201-6370">415-201-6370</a -->
+              <!--^ ><br /> -->
+              <a class="footer-link" href="mailto:hello@omnifood.com"
+                >contact@latenightstumblers.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <!-- <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+          </ul>
+        </nav> -->
+
+        
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Calendar</a></li>
+            <li><a class="footer-link" href="#">Lyrics</a></li>
+            <li><a class="footer-link" href="#">Privacy & Terms</a></li>
+          </ul>
+        </nav>
+
+       
+        <div class="footer__socials">
+          <nav class="nav-col socials_nav">
+            <p class="footer-heading">Socials</p>
+            <ul class="footer-nav-socials">
+              
+              <li><a class="footer-link" href="https://www.youtube.com/channel/UCjZVmwhEPph12Ur_jmhDzHg"><img class= "footer__soical-icons" src="/social icons/5296521_play_video_vlog_youtube_youtube logo_icon.svg" alt="youtube logo"></a></li>
+              <li><a class="footer-link" href="https://www.instagram.com/thelatenightstumblers/"><img class= "footer__soical-icons" src="/social icons/4102579_applications_instagram_media_social_icon.png" alt="instagram logo"></a></li>
+              <li><a class="footer-link" href="#"><img class= "footer__soical-icons" src="/social icons/Patreon_icon_white.png" alt="patreon logo"></a></li>
+              <li><a class="footer-link" href="#"><img class= "footer__soical-icons" src="/social icons/discord_logo_blue.png" alt="discord logo"></a></li>
+              <li><a class="footer-link" href="https://www.facebook.com/thelatenightstumblers/"><img class= "footer__soical-icons" src="/social icons/5296500_fb_social media_facebook_facebook logo_social network_icon.png" alt="facebook logo"></a></li>
+              <li><a class="footer-link" href="#"><img class= "footer__soical-icons" src="/social icons/white_snap_icon.png" alt="snapchat logo"></a></li>
+              <li><a class="footer-link" href="#"><img class= "footer__soical-icons" src="/social icons/5296514_bird_tweet_twitter_twitter logo_icon.png" alt="twitter logo"></a></li>
+
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>  
+    <script>
+        // Get DOM elements
+const track = document.querySelector('.carousel__track');
+const slides = Array.from(track.children);
+const nextBtn = document.querySelector('.carousel__button--right');
+const prevBtn = document.querySelector('.carousel__button--left');
+const dotsNav = document.querySelector('.carousel__nav');
+const dots = Array.from(dotsNav.children);
+
+// Calculate slide width
+const slideWidth = slides[0].getBoundingClientRect().width;
+
+// Set initial position of slides
+const setSlidePosition = (slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
+};
+slides.forEach(setSlidePosition);
+
+// Move to target slide
+const moveToSlide = (track, currentSlide, targetSlide) => {
+    track.style.transform = `translateX(-${targetSlide.style.left})`;
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
+};
+
+// Update dot indicators
+const updateDots = (currentDot, targetDot) => {
+    currentDot.classList.remove('current-slide');
+    targetDot.classList.add('current-slide');
+};
+
+// Hide/Show arrows based on target slide index
+const hideShowArrows = (slides, prevBtn, nextBtn, targetIndex) => {
+    if (targetIndex === 0) {
+        prevBtn.classList.add('is-hidden');
+        nextBtn.classList.remove('is-hidden');
+    } else if (targetIndex === slides.length - 1) {
+        prevBtn.classList.remove('is-hidden');
+        nextBtn.classList.add('is-hidden');
+    } else {
+        prevBtn.classList.remove('is-hidden');
+        nextBtn.classList.remove('is-hidden');
+    }
+};
+
+// Handle click on previous arrow button
+prevBtn.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    const prevSlide = currentSlide.previousElementSibling;
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const prevDot = currentDot.previousElementSibling;
+    const prevIndex = slides.findIndex(slide => slide === prevSlide);
+
+    moveToSlide(track, currentSlide, prevSlide);
+    updateDots(currentDot, prevDot);
+    hideShowArrows(slides, prevBtn, nextBtn, prevIndex);
+});
+
+// Handle click on next arrow button
+nextBtn.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    const nextSlide = currentSlide.nextElementSibling;
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const nextDot = currentDot.nextElementSibling;
+    const nextIndex = slides.findIndex(slide => slide === nextSlide);
+
+    moveToSlide(track, currentSlide, nextSlide);
+    updateDots(currentDot, nextDot);
+    hideShowArrows(slides, prevBtn, nextBtn, nextIndex);
+});
+
+// Handle click on dot indicator
+dotsNav.addEventListener('click', e => {
+    const targetDot = e.target.closest('button');
+    if (!targetDot) return;
+
+    const currentSlide = track.querySelector('.current-slide');
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const targetIndex = dots.findIndex(dot => dot === targetDot);
+    const targetSlide = slides[targetIndex];
+
+    moveToSlide(track, currentSlide, targetSlide);
+    updateDots(currentDot, targetDot);
+    hideShowArrows(slides, prevBtn, nextBtn, targetIndex);
+});
+
+    </script>
+</body>
+</html>
